@@ -1,7 +1,15 @@
 function fetchWeatherData(latitude, longitude) {
     const apiKey = '91508ca96fefaf58f39ed1b7e029abe0';
-    const apiUrl = `https://api.opeweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
-
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    let location = document.getElementById("location");
+    let temperature = document.getElementById("temp");
+    let windSpeed = document.getElementById("windSpeed");
+    let windDeg = document.getElementById("windDeg");
+    let windGust = document.getElementById("windGust");
+    let lon = document.getElementById("lon");
+    let lat = document.getElementById("lat");
+    let humidity = document.getElementById("humidity");
+    let pressure = document.getElementById("pressure");
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -11,16 +19,21 @@ function fetchWeatherData(latitude, longitude) {
         })
         .then(data => {
             // Process the data and display it on the page
-            const weatherData = `
-                <p>Location: ${data.name}</p>
-                <p>Temperature: ${data.main.temp}°C</p>
-                <p>Description: ${data.weather[0].description}</p>
-            `;
-            document.getElementById('weather-data').innerHTML = weatherData;
+            console.log(data);
+            location.innerText = data.name || 'N/A';
+            temperature.innerText = data.main && data.main.temp ? (data.main.temp - 273.15).toFixed(2) + '°C' : 'N/A';
+            windSpeed.innerText = data.wind && data.wind.speed ? data.wind.speed + ' m/s' : 'N/A';
+            windDeg.innerText = data.wind && data.wind.deg ? data.wind.deg + '°' : 'N/A';
+            windGust.innerText = data.wind && data.wind.gust ? data.wind.gust + ' m/s' : 'N/A';
+            lon.innerText = data.coord && data.coord.lon ? data.coord.lon : 'N/A';
+            lat.innerText = data.coord && data.coord.lat ? data.coord.lat : 'N/A';
+            humidity.innerText = data.main && data.main.humidity ? data.main.humidity + '%' : 'N/A';
+            pressure.innerText = data.main && data.main.pressure ? data.main.pressure + ' hPa' : 'N/A';
+            console.log("executing");
         })
         .catch(error => {
             console.error('There was a problem fetching the weather data:', error);
-            document.getElementById('weather-data').innerHTML = 'Error fetching weather data';
+            document.getElementById('weather-data').innerText = 'Error fetching weather data';
         });
 }
 

@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background-image: url("assets/images/weatherFarm.jpg");
+            background-size: cover;
+            backdrop-filter: blur(3px);
+            height: 100vh;
+        }
+        .active{
+            background-color: white;
+            padding: 8px;
+            border-radius: 100%;
+            color: rgb(49, 14, 14);
+        }
+    </style>
 </head>
 <body>
-    <div id="weather-data">
-
+    <div class="flex flex-col items-center content-center">
+        <h2 class="text-2xl font-semibold text-center mt-10">Weather</h2>
+        <div class="location flex items-center content-center mt-10">
+            <i class="fa fa-location-dot mr-2"></i>
+            <p id="location" class="text-xl font-semibold text-lime-900">Raipur</p>
+        </div>
+        <i class="fa fa-sun text-9xl text-yellow-300 mt-10"></i>
+        <p class="mt-5 font-semibold text-5xl"><span id="temp">22</span></p>
+        <p id="weather-data"></p>
+        <p class="mt-5 text-lg font-medium">Today May 2024, 06:02 PM</p>
+        <div class="master-container mt-9 flex flex-wrap justify-evenly w-full text-slate-950 font-medium text-base">
+            <div class="left bg-white bg-opacity-30 backdrop-blur-md p-4 rounded-md shadow-2xl">
+                <p class="text-xl">Wind</p>
+                <p class="mt-1">Speed: <span id="windSpeed"></span></p>
+                <p class="mt-1">Degrees: <span id="windDeg"></span></p>
+                <p class="mt-1">Gust: <span id="windGust"></span></p>
+            </div>
+            <div class="right bg-white bg-opacity-30 backdrop-blur-md p-4 rounded-md shadow-2xl">
+                <p class="text-xl">Details</p>
+                <p>Longitude: <span id="lon"></span></p>
+                <p>Latitude: <span id="lat"></span></p>
+                <p>Pressure: <span id="pressure"></span></p>
+                <p>Humidity: <span id="humidity"></span></p>
+            </div>
+        </div>
     </div>
+    <footer class="fixed bottom-0 bg-green-900 w-full p-3 text-2xl flex justify-around text-orange-200">
+        <a href="menu.html"><i class="fa fa-home active"></i></a>
+        <a href=""><i class="fa fa-cloud-sun-rain"></i></a>
+        <a href=""><i class="fa fa-store"></i></a>
+        <a href=""><i class="fa fa-info"></i></a>
+        <a href=""><i class="fa fa-user"></i></a>
+    </footer>
     <script src="assets/js/index.js"></script>
 </body>
 </html>
