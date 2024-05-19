@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="menu-page">
+        <div class="header-image relative">
+            <img src="assets/images/1-crops-grow-on-fertile-farm-land-pgiam.jpg" class="h-72 brightness-75" alt="">
+            <div class="bottom-border h-14 size-full absolute -bottom-1 rounded-tr-full bg-white"></div>
+        </div>
+        <div class="menu-container p-3 px-8">
+            <h3 class="px-2 font-bold">Welcome User,</h3>
+            <div class="card-container flex mt-3 flex-wrap">
+                <div id="Weather" class="flex m-2 w-36 h-40 flex-col p-2 rounded-md bg-green-200 shadow-md items-center content-center hover:bg-green-300 transition-all">
+                    <img src="assets/images/cloudy.png" class="w-24" alt="">
+                    <h3 class="font-bold text-base text-center mt-1">Weather forecast</h3>
+                </div>
+                <div class="flex m-2 w-36 h-40 flex-col p-3 rounded-md bg-green-200 shadow-md items-center content-center hover:bg-green-300 transition-all">
+                    <img src="assets/images/shop.png" class="w-24" alt="">
+                    <h3 class="font-bold text-base text-center mt-1">Store</h3>
+                </div>
+                <div class="flex m-2 w-36 h-40 flex-col p-3 rounded-md bg-green-200 shadow-md items-center content-center hover:bg-green-300 transition-all">
+                    <img src="assets/images/list.png" class="w-24" alt="">
+                    <h3 class="font-bold text-base text-center mt-1">Information</h3>
+                </div>
+                <div class="flex m-2 w-36 h-40 flex-col p-3 rounded-md bg-green-200 shadow-md items-center content-center hover:bg-green-300 transition-all">
+                    <img src="assets/images/user.png" class="w-24" alt="">
+                    <h3 class="font-bold text-base text-center mt-1">Account</h3>
+                </div>
+            </div>
+        </div>
+        <div class="settings absolute bottom-6 right-6">
+            <i class="fa-solid fa-gear text-2xl rounded-full shadow-lg p-2 px-3  bg-slate-400"></i>
+        </div>
+    </div>
+    <script src="assets/js/clickEvents.js"></script>
+</body>
+</html>
