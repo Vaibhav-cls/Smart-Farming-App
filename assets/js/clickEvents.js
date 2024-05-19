@@ -5,5 +5,5 @@ document.getElementById("login-btn").addEventListener('click',(ev)=>{
 })
 document.getElementById("Weather").addEventListener('click',(e)=>{
     //e.preventDefault();
-    window.location.href = '/weather.html';
+    window.location.href = 'https://github.com/Vaibhav-cls/Smart-Farming-App/blob/main/weather.html';
 })
