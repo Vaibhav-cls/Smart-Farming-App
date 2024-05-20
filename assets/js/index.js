@@ -1,6 +1,6 @@
-function fetchWeatherData(latitude, longitude) {
+function fetchWeatherData(latitude, longitude) { /*lat=${latitude}&lon=${longitude}*/
     const apiKey = '91508ca96fefaf58f39ed1b7e029abe0';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=raipur&appid=${apiKey}`;
     let location = document.getElementById("location");
     let temperature = document.getElementById("temp");
     let windSpeed = document.getElementById("windSpeed");
