@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active{
+            background-color: white;
+            padding: 10px;
+            border-radius: 100%;
+            color: rgb(49, 14, 14);
+        }
+        .header{
+            background: rgb(22,61,32);
+            background: linear-gradient(90deg, rgba(22,61,32,1) 0%, rgba(0,171,38,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="header rounded-b-2xl p-3 px-7 text-white flex flex-col items-center">
+        <div class="nav flex items-center justify-between w-full">
+            <div class="right flex items-center justify-between">
+                <i class="fa fa-bars text-xl mr-3"></i>
+                <div class="welcome-note">
+                    <h3 class="text-base">Hi User,</h3>
+                    <p class="-mt-1 text-xs">Welcome to the store</p>
+                </div>
+            </div>
+            <i class="fa fa-bell text-xl"></i>
+        </div>
+        <div class="search-bar">
+            <i style="border-right: none;" class="fa fa-search border border-x-1 -mr-1 border-white p-3 rounded-l-2xl  py-2"></i>
+            <input type="text" placeholder="Search here" style="border-left:none;border-right: none;" class="outline-none bg-transparent border border-x-1 border-white p-1 mt-5 center">
+            <i style="border-left: none;" class="fa fa-microphone border border-x-1 -ml-1 border-white p-3 rounded-r-2xl py-2"></i>
+        </div>  
+    </div>
+    <h2 class="text-xl font-bold text-center mt-5">Categories</h2>
+    <div class="category-container p-4 px-6 font-semibold">
+        <div class="category-1">
+            <div class="title flex justify-between">
+                <p>Fresh Fruits</p>
+                <p class="text-gray-600 text-sm">See more -></p>
+            </div>
+            <div class="cateogry-card-container flex flex-wrap mt-3 justify-around">
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/mango.webp" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Mango</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 150/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/oranges.webp" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Orange</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 80/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/banana.webp" class="w-20 object-cover h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Banana</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 70/dozen</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/grapes.jpg" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Grapes</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 80/Kg</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="category-2 mt-2">
+            <div class="title flex justify-between">
+                <p>Fresh Vegetables</p>
+                <p class="text-gray-600 text-sm">See more -></p>
+            </div>
+            <div class="cateogry-card-container flex flex-wrap mt-3 justify-around">
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/onion.jpg" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Onion</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 30/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/potato.webp" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Potato</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 25/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/broccoli.jpg" class="w-20 object-cover h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Broccoli</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 50/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/spinach.jpg" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Spinach</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 40/Kg</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="category-3 mt-2">
+            <div class="title flex justify-between">
+                <p>Millets</p>
+                <p class="text-gray-600 text-sm">See more -></p>
+            </div>
+            <div class="cateogry-card-container flex flex-wrap mt-3 justify-around">
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/bajra.avif" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Bajra</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 100/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/jowar.jpg" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Jowar</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 90/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/ragi.jpg" class="w-20 object-cover h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Ragi</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 85/Kg</p>
+                    </div>
+                </div>
+                <div class="card flex justify-center my-1 items-center bg-lime-300 pr-3 rounded-xl overflow-hidden">
+                    <img src="assets/images/kangini.webp" class="object-cover w-20 h-[66px] mr-2 brightness-105" alt="">
+                    <div class="text-center text-sm font-bold text-green-950">
+                        <p>Kangini</p>
+                        <p><i class="fa fa-indian-rupee-sign text-green-700 text-xs"></i> 70/Kg</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="bottom-0  w-full h-16"></div>
+    <footer class="fixed bottom-0 bg-green-900 w-full h-16 p-3 text-2xl flex justify-around text-orange-200">
+        <a href="menu.html"><i class="fa fa-home"></i></a>
+        <a href="weather.html"><i class="fa fa-cloud-sun-rain"></i></a>
+        <a href="store.html"><i class="active fa fa-store"></i></a>
+        <a href="info.html"><i class="fa fa-info"></i></a>
+        <a href=""><i class="fa fa-user"></i></a>
+    </footer>
+</body>
+</html>
