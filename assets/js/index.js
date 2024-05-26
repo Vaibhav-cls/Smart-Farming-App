@@ -1,6 +1,6 @@
-function fetchWeatherData(latitude, longitude) { /*lat=${latitude}&lon=${longitude}*/
+function fetchWeatherData(latitude, longitude) {
     const apiKey = '91508ca96fefaf58f39ed1b7e029abe0';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=raipur&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
     let location = document.getElementById("location");
     let temperature = document.getElementById("temp");
     let windSpeed = document.getElementById("windSpeed");
@@ -29,7 +29,6 @@ function fetchWeatherData(latitude, longitude) { /*lat=${latitude}&lon=${longitu
             lat.innerText = data.coord && data.coord.lat ? data.coord.lat : 'N/A';
             humidity.innerText = data.main && data.main.humidity ? data.main.humidity + '%' : 'N/A';
             pressure.innerText = data.main && data.main.pressure ? data.main.pressure + ' hPa' : 'N/A';
-            console.log("executing");
         })
         .catch(error => {
             console.error('There was a problem fetching the weather data:', error);

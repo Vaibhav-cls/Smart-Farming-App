@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farming App</title>
-  <link rel="stylesheet" href="assets/index-CWmxQhcx.css">
+  <link rel="stylesheet" crossorigin href="assets/index-CWmxQhcx.css">
 </head>
 <body class="bg-white font-sans">
     <div class="login-page">
@@ -12,7 +12,7 @@
             <img src="assets/farm_bg-BPACp1g3.jfif" class="h-72 brightness-75" alt="">
             <div class="bottom-border h-14 size-full absolute -bottom-1 rounded-tr-full bg-white"></div>
         </div>
-        <form class="bg-white flex flex-col items-center content-center mt-14">
+        <form id="loginForm" class="bg-white flex flex-col items-center content-center mt-14">
             <h3 class="font-bold text-3xl tracking-wider text-amber-950">Login</h3>
             <p class="text-xs text-gray-400">Sign in to continue</p>
             <div class="field mt-7 w-56">
@@ -23,10 +23,11 @@
                 <label for="password" class="block text-xs uppercase w-full text-gray-500">Password</label>
                 <input type="password" name="password" class="w-full outline-none text-black text-sm pl-3 py-1.5 mt-1 text-left bg-lime-200 rounded-xl" id="password" placeholder="****">
             </div>
-            <a href="menu.html" id="login-btn" class="w-56 text-center bg-orange-800 rounded-md text-white mt-4 py-1">Log In</a>
+            <button type="submit"  id="login-btn" class="disabled w-56 text-center bg-orange-800 rounded-md text-white mt-4 py-1">Log In</button>
             <p class="text-xs text-gray-500 mt-8">Forgot Password?</p>
             <p class="text-xs text-gray-500 mt-2">Signup!</p>
         </form>
     </div>
+    <script src="assets/js/auth.js"></script>
 </body>
 </html>
