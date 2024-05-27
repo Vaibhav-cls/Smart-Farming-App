@@ -22,13 +22,13 @@ function getURLParameter(name) {
 // Get the username and password from the URL
 const usernameFromURL = getURLParameter('username');
 const passwordFromURL = getURLParameter('password');
-
 // Function to authenticate user
 function authenticate(username, password) {
     const validUser = user_details.find(user => user.username === username && user.password === password);
     console.log(validUser);
     if (validUser) {
         window.location.href = 'https://vaibhav-cls.github.io/Smart-Farming-App/menu.html';
+        localStorage.setItem('username',username);
     } else {
         alert('Invalid username or password');
     }
