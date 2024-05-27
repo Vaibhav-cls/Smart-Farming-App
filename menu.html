@@ -40,8 +40,14 @@
         </div>
     </div>
     <script>
-        document.getElementById('welcomeMsg').innerText = `Welcome ${localStorage.getItem('username')},`;
-        localStorage.removeItem('username');
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('welcomeMsg').innerText = `Welcome ${username},`;
+            // Optionally remove the username from localStorage after displaying it
+            // localStorage.removeItem('username');
+        } else {
+            document.getElementById('welcomeMsg').innerText = 'Welcome User,';
+        }
     </script>
 </body>
 </html>
